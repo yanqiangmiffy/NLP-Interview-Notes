@@ -111,3 +111,6 @@
      5.  并查集的应用 (LeetCode 547. Friend Circles)
      6.  线段树与树状数组
      7.  线段树与树状数组的应用(LeetCode 307. Range Sum Query – Mutable)
+     
+     
+![](https://github.com/yanqiangmiffy/NLP-Interview-Notes/blob/master/%E5%A6%82%E4%BD%95%E5%88%B7%E9%A2%98.png)
