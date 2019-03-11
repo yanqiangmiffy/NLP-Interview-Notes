@@ -49,5 +49,9 @@
 
 ## 其他问题
 - 如何在embedding层之前实现两个句子向量交互
+## 面试技巧
+- 掌握一门基础语言（c++或者java），尤其大厂很注重这一点
+- 发散性思维
 ## 相关资料
 [机器学习算法岗面试与提问总结](https://zhuanlan.zhihu.com/p/58434325?utm_source=wechat_session&utm_medium=social&s_r=0#showWechatShareTip)
+[精选Python面试100题](https://mp.weixin.qq.com/s/uPvzonBTGYLqF7PO3hZ8cg)
