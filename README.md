@@ -47,5 +47,7 @@
 5. RNN的前向和后向传播
 6. 三层全连接网络的模拟过程
 
+## 其他问题
+- 如何在embedding层之前实现两个句子向量交互
 ## 相关资料
 [机器学习算法岗面试与提问总结](https://zhuanlan.zhihu.com/p/58434325?utm_source=wechat_session&utm_medium=social&s_r=0#showWechatShareTip)
