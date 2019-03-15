@@ -51,8 +51,11 @@
 3. 牛客网
 
 ## 面试技巧
-- 掌握一门基础语言（c++或者java），尤其大厂很注重这一点
-- 发散性思维
+1. 掌握一门基础语言（c++或者java），尤其大厂很注重这一点
+2. 发散性思维
 ## 相关资料
 [机器学习算法岗面试与提问总结](https://zhuanlan.zhihu.com/p/58434325?utm_source=wechat_session&utm_medium=social&s_r=0#showWechatShareTip)
 [精选Python面试100题](https://mp.weixin.qq.com/s/uPvzonBTGYLqF7PO3hZ8cg)
+[知识点 | 关于机器学习的超全总结](http://wemedia.ifeng.com/86075044/wemedia.shtml)
+[生成模型学习笔记：从高斯判别分析到朴素贝叶斯](https://www.jiqizhixin.com/articles/2018-12-24-13?from=synced&keyword=%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83)
+[专栏 | Bi-LSTM+CRF在文本序列标注中的应用](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650735630&idx=4&sn=726c61346d436edb69963dd88cc35a41)
