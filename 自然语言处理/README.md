@@ -20,6 +20,7 @@ TF-IDF的计算结果如下：
 ![](https://upload-images.jianshu.io/upload_images/1531909-cadbc646b0c830b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 - TF-IDF优缺点 
+
 > TF-IDF的优点是简单快速，而且容易理解。缺点是有时候用词频来衡量文章中的一个词的重要性不够全面，有时候重要的词出现的可能不够多，而且这种计算无法体现位置信息，无法体现词在上下文的重要性。[reference：https://zhuanlan.zhihu.com/p/31197209]
 
 ## K-means
@@ -32,4 +33,5 @@ TF-IDF的计算结果如下：
 ![更新聚类中心](https://upload-images.jianshu.io/upload_images/1531909-6d2e7a974b5531f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 - K-means优缺点
+
 容易理解，而且有效，但是计算量比较大，耗费时间长，K的个数不好确定
