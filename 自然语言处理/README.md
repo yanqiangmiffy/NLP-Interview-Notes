@@ -24,9 +24,12 @@ TF-IDF的计算结果如下：
 
 ## K-means
 
-**使用K-means进行文本聚类**
+- **使用K-means进行文本聚类**
 
 >k-means算法需要事先指定簇的个数k，算法开始随机选择k个记录点作为中心点，然后遍历整个数据集的各条记录，将每条记录归到离它最近的中心点所在的簇中，之后以各个簇的记录的均值中心点取代之前的中心点，然后不断迭代，直到收敛
 
 ![将点归类到与聚类中心距离最短的类别](https://upload-images.jianshu.io/upload_images/1531909-6cd52f756d2c0586.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![更新聚类中心](https://upload-images.jianshu.io/upload_images/1531909-6d2e7a974b5531f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- K-means优缺点
+容易理解，而且有效，但是计算量比较大，耗费时间长，K的个数不好确定
