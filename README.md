@@ -39,7 +39,7 @@
 ## 微软
 1. xgboost分类节点的依据
 
-如何计算每次分裂的收益呢？假设当前节点记为C,分裂之后左孩子节点记为L，右孩子节点记为R，则该分裂获得的收益定义为当前节点的目标函数值减去左右两个孩子节点的目标函数值之和：Gain=ObjC-ObjL-ObjR，具体地，根据目标函数值公式可得：
+>如何计算每次分裂的收益呢？假设当前节点记为C,分裂之后左孩子节点记为L，右孩子节点记为R，则该分裂获得的收益定义为当前节点的目标函数值减去左右两个孩子节点的目标函数值之和：`Gain=ObjC-ObjL-ObjR`，具体地，根据目标函数值公式可得：
 ![](https://upload-images.jianshu.io/upload_images/1371984-d0a9c89dbbc34f7c.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/544/format/webp)
 
 2. 信息增益vs信息增益比
