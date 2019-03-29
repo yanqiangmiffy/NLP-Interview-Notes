@@ -144,3 +144,17 @@ for i in range(0, n):
 ```
 
 阅读原文：[PageRank算法原理与实现](https://www.quantinfo.com/Article/View/1232/PageRank%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0.html)
+
+- **3.2 TextRank**
+
+TextRank将某一个词与其前面的N个词、以及后面的N个词均具有图相邻关系（类似于N-gram语法模型）。具体实现：设置一个长度为N的滑动窗口，所有在这个窗口之内的词都视作词结点的相邻结点；则TextRank构建的词图为无向图。下图给出了由一个文档构建的词图（去掉了停用词并按词性做了筛选）：
+![](https://images2015.cnblogs.com/blog/399159/201703/399159-20170327130549123-69914342.png)
+
+考虑到不同词对可能有不同的共现（co-occurrence），TextRank将共现作为无向图边的权值。那么，TextRank的迭代计算公式如下：
+
+![](https://www.letiantian.me/content/images/2014/12/textrank-02.png)
+
+原文链接：
+
+- [使用TextRank算法为文本生成关键字和摘要](https://www.letiantian.me/2014-12-01-text-rank/)
+- [关键词提取算法TextRank](https://www.cnblogs.com/en-heng/p/6626210.html)
