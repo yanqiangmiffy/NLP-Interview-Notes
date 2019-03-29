@@ -23,7 +23,7 @@ TF-IDF的计算结果如下：
 
 > TF-IDF的优点是简单快速，而且容易理解。缺点是有时候用词频来衡量文章中的一个词的重要性不够全面，有时候重要的词出现的可能不够多，而且这种计算无法体现位置信息，无法体现词在上下文的重要性。[reference：https://zhuanlan.zhihu.com/p/31197209]
 
-## K-means
+## 2 K-means
 
 - **使用K-means进行文本聚类**
 
@@ -36,27 +36,30 @@ TF-IDF的计算结果如下：
 
 容易理解，而且有效，但是计算量比较大，耗费时间长，K的个数不好确定
 
-## TextRank
+## 3 TextRank
 提到TextRank，我们需要先从PageRank说起
-- **PageRank**
+- **3.1 PageRank**
 
 PageRank，又称网页排名、谷歌左侧排名，是一种由搜索引擎根据网页之间相互的超链接计算的技术，而作为网页排名的要素之一，以Google公司创办人拉里·佩奇（Larry Page）之姓来命名。
 
 假设一个由4个网页组成的群体：A，B，C和D。如果所有页面都只链接至A，那么A的PR（PageRank）值将是B，C及D的Pagerank总和。
+
 ![](https://wx2.sinaimg.cn/mw690/e59539f0ly1g1jhnsn7wxj208a07zt8q.jpg) 
 计算公式如下：
+
 ![](https://www.quantinfo.com/attachment/article/20180728/1532762247287744613.png)
 
 重新假设B链接到A和C，C只链接到A，并且D链接到全部其他的3个页面。一个页面总共只有一票。所以B给A和C每个页面半票。以同样的逻辑，D投出的票只有三分之一算到了A的PageRank上。
 
 ![](https://wx3.sinaimg.cn/mw690/e59539f0ly1g1jho6s18cj207u07swek.jpg)
 
-计算公式如下：
+- 3.1.1 计算公式如下：
 
 ![](https://www.quantinfo.com/attachment/article/20180728/1532762238832115527.png)
 
 
 对于一个页面A，那么它的PR值为：
+
 ![](https://www.quantinfo.com/attachment/article/20180728/1532762264513765890.png)
 
 - PR(A) 是页面A的PR值
@@ -67,4 +70,75 @@ PageRank，又称网页排名、谷歌左侧排名，是一种由搜索引擎根
 
 - d 为阻尼系数，其意义是，在任意时刻，用户到达某页面后并继续向后浏览的概率，该数值是根据上网者使用浏览器书签的平均频率估算而得，通常d=0.85
 
+ - 3.1.2 具体实例
  
+ ![](https://www.quantinfo.com/attachment/article/20180728/1532762159949967486.png)
+ 
+三个页面A、B、C为了便于计算，我们假设每个页面的PR初始值为1，d为0.5。
+
+- 页面A的PR值计算如下：
+
+![](https://www.quantinfo.com/attachment/article/20180728/1532762153669456933.png)
+
+- 页面B的PR值计算如下：
+
+![](https://www.quantinfo.com/attachment/article/20180728/1532762147268488165.png)
+
+- 页面C的PR值计算如下：
+
+![](https://www.quantinfo.com/attachment/article/20180728/1532762141558183138.png)
+
+
+下面是迭代计算12轮之后，各个页面的PR值：
+
+![](https://www.quantinfo.com/attachment/article/20180728/1532762134982268920.jpg)
+
+那么什么时候，迭代结束哪？一般要设置收敛条件：比如上次迭代结果与本次迭代结果小于某个误差，我们结束程序运行；比如还可以设置最大循环次数。
+
+ - 3.1.3 代码实现
+ 
+```
+import numpy as np
+from scipy.sparse import csc_matrix
+
+def pageRank(G, s=.85, maxerr=.0001):
+"""
+Computes the pagerank for each of the n states
+Parameters
+----------
+G: matrix representing state transitions
+Gij is a binary value representing a transition from state i to j.
+s: probability of following a transition. 1-s probability of teleporting
+to another state.
+maxerr: if the sum of pageranks between iterations is bellow this we will
+    have converged.
+"""
+n = G.shape[0]
+# 将 G into 马尔科夫 A
+A = csc_matrix(G, dtype=np.float)
+rsums = np.array(A.sum(1))[:, 0]
+ri, ci = A.nonzero()
+A.data /= rsums[ri]
+sink = rsums == 0
+# 计算PR值，直到满足收敛条件
+ro, r = np.zeros(n), np.ones(n)
+while np.sum(np.abs(r - ro)) > maxerr:
+ro = r.copy()
+for i in range(0, n):
+   Ai = np.array(A[:, i].todense())[:, 0]
+    Di = sink / float(n)
+    Ei = np.ones(n) / float(n)
+   r[i] = ro.dot(Ai * s + Di * s + Ei * (1 - s))
+ # 归一化
+ return r / float(sum(r))
+ if __name__ == '__main__':
+ # 上面的例子
+ G = np.array([[0, 0, 1],
+          [1, 0, 0],
+          [1, 1, 0]])
+ print(pageRank(G, s=0.85))
+ # 结果：
+ [0.51203622 0.19313191 0.29483187]
+```
+
+阅读原文：[PageRank算法原理与实现](https://www.quantinfo.com/Article/View/1232/PageRank%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0.html)
