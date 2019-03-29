@@ -35,3 +35,19 @@ TF-IDF的计算结果如下：
 - K-means优缺点
 
 容易理解，而且有效，但是计算量比较大，耗费时间长，K的个数不好确定
+
+## TextRank
+提到TextRank，我们需要先从PageRank说起
+- **PageRank**
+
+PageRank，又称网页排名、谷歌左侧排名，是一种由搜索引擎根据网页之间相互的超链接计算的技术，而作为网页排名的要素之一，以Google公司创办人拉里·佩奇（Larry Page）之姓来命名。
+
+假设一个由4个网页组成的群体：A，B，C和D。如果所有页面都只链接至A，那么A的PR（PageRank）值将是B，C及D的Pagerank总和。
+![](https://wx2.sinaimg.cn/mw690/e59539f0ly1g1jhnsn7wxj208a07zt8q.jpg) 
+计算公式如下：
+![](https://www.quantinfo.com/attachment/article/20180728/1532762247287744613.png)
+
+重新假设B链接到A和C，C只链接到A，并且D链接到全部其他的3个页面。一个页面总共只有一票。所以B给A和C每个页面半票。以同样的逻辑，D投出的票只有三分之一算到了A的PageRank上。
+![](https://wx3.sinaimg.cn/mw690/e59539f0ly1g1jho6s18cj207u07swek.jpg)
+计算公式如下：
+![](https://www.quantinfo.com/attachment/article/20180728/1532762238832115527.png)
