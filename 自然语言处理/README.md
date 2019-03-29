@@ -48,6 +48,23 @@ PageRank，又称网页排名、谷歌左侧排名，是一种由搜索引擎根
 ![](https://www.quantinfo.com/attachment/article/20180728/1532762247287744613.png)
 
 重新假设B链接到A和C，C只链接到A，并且D链接到全部其他的3个页面。一个页面总共只有一票。所以B给A和C每个页面半票。以同样的逻辑，D投出的票只有三分之一算到了A的PageRank上。
+
 ![](https://wx3.sinaimg.cn/mw690/e59539f0ly1g1jho6s18cj207u07swek.jpg)
+
 计算公式如下：
+
 ![](https://www.quantinfo.com/attachment/article/20180728/1532762238832115527.png)
+
+
+对于一个页面A，那么它的PR值为：
+![](https://www.quantinfo.com/attachment/article/20180728/1532762264513765890.png)
+
+- PR(A) 是页面A的PR值
+
+- PR(Ti)是页面Ti的PR值，在这里，页面Ti是指向A的所有页面中的某个页面
+
+- C(Ti)是页面Ti的出度，也就是Ti指向其他页面的边的个数
+
+- d 为阻尼系数，其意义是，在任意时刻，用户到达某页面后并继续向后浏览的概率，该数值是根据上网者使用浏览器书签的平均频率估算而得，通常d=0.85
+
+ 
