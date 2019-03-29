@@ -45,24 +45,17 @@
 ![](https://upload-images.jianshu.io/upload_images/1371984-d0a9c89dbbc34f7c.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/544/format/webp)
 
 2. 信息增益vs信息增益比
-
 3. HMM原理
-
 4. LDA原理
-
 5. LSTM网络结构图
-
 6. 二叉树层次遍历
-
 7. 青蛙上楼梯
-
-9. 快速排序
-
+8. 快速排序
 9. 项目（中间考虑项目是否存在缺陷，比较细节，这一块很重要）
 10. 余弦距离、曼哈顿距离公式
 11. SQL取第50条到第100条数据
 12. pandas取最后三列的方法
-
+13. TextRank原理
 ## 其他公司面试
 1. 堆排序和快速排序
 2. 贝叶斯原理和推理过程
