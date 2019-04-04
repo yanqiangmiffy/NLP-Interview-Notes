@@ -66,6 +66,43 @@
 6. 还有一个矩阵题（太长了，四五行，题意读不懂）
 7. AI自动写作系统设计写出思路，没有代码
 
+## 百度在线笔试
+
+1. 数字0-9，每个数字的使用次数大于等于0，输入数A的位数，数B的位数，求A和B乘积的最小值
+```
+
+# cnts=[1,3,0,0,0,0,0,0,0,1]
+
+# A=2;B=2
+
+
+# cnts=[2,3,0,0,0,0,0,0,0,1]
+cnts=[2,3,0,0,0,0,0,0,0,1]
+A=1;B=1
+def findMinFac(cnts,A,B):
+    nums=[0,1,2,3,4,5,6,7,8,9]
+    num_cnt=dict(zip(nums,cnts))
+    if A<=B:
+        A,B=B,A
+    aval=0
+    for num in num_cnt:
+        while num_cnt[num]>0 and A>0:
+            aval=aval+10**(A-1)*num
+            num_cnt[num]-=1
+            A-=1
+            # print("A:",A,"aval",aval)    
+
+    bval=0
+    for num in num_cnt:
+        while num_cnt[num]>0 and B>0:
+            bval=bval+10**(B-1)*num
+            num_cnt[num]-=1
+            B-=1
+            # print("B:",B,"aval",bval)
+    return aval*bval
+print(findMinFac(cnts,A,B))
+
+```
 ## 其他公司面试
 1. 堆排序和快速排序
 2. 贝叶斯原理和推理过程
