@@ -67,10 +67,17 @@
 7. AI自动写作系统设计写出思路，没有代码
 
 ## 联想面试
-- CNN的3大有点
+- CNN的3大优点
 
->CNN的三个优点：sparse interaction(稀疏的交互)，parameter sharing(参数共享)，equivalent respresentation(等价表示)。适合于自动问答系统中的答案
-选择模型的训练。
+>CNN的三个优点：sparse interaction(稀疏的交互)，parameter sharing(参数共享)，equivalent respresentation(等价表示)。适合于自动问答系统中的答案选择模型的训练。
+
+- RNN、LSTM、DNN、CNN比较
+
+- LR的损失函数
+- 常见激活函数的比较
+- SVM 支持向量到直线的距离公式
+- 常见核函数有哪些
+- 剪枝策略
 ## 联想研究员自然语言处理实习生
 面试小组是做联想智能问答的，然后主要题目如下：
 1. 数据预处理方法
