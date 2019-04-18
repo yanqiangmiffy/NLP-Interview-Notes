@@ -71,6 +71,22 @@
 
 >CNN的三个优点：sparse interaction(稀疏的交互)，parameter sharing(参数共享)，equivalent respresentation(等价表示)。适合于自动问答系统中的答案
 选择模型的训练。
+## 联想研究员自然语言处理实习生
+面试小组是做联想智能问答的，然后主要题目如下：
+1. 数据预处理方法
+2. TensorFlow实现基本运算
+3. sgd原理、是否收敛
+4. cnn卷积作用、参数共享怎么回事
+5. 池化和池化作用
+6. batchsize选择的依据
+7. attention机制
+8. word2vec
+9. knn、贝叶斯、svm，kmeans、pca
+10. 编程题统计100w词频
+11. 1亿个数排序，查找
+12. 开放性题目：如何实现问题检索
+13. 编辑距离
+14. python2.7和python3的区别
 
 ## 百度在线笔试
 
