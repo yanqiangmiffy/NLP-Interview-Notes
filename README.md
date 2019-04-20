@@ -84,6 +84,9 @@
 4. cnn卷积作用、参数共享怎么回事
 5. 池化和池化作用
 6. batchsize选择的依据
+> 较大Batch Size：1、 提高了内存的利用率，大矩阵乘法的并行化效率提高；2、 运行一次epoch所需要的迭代次数减少，相同数据量的数据处理速度加快；3、 Batch_Size越大下降方向越准，引起的训练震荡越小。但是每次迭代耗时更长。
+
+> 较小Batch Size：Batch_Size不宜选的太小，太小了容易修正方向导致不收敛，或者需要经过很大的epoch才能收敛；
 7. attention机制
 8. word2vec
 9. knn、贝叶斯、svm，kmeans、pca
