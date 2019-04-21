@@ -19,4 +19,5 @@
 ## 算法优化
 - [克服过拟合和提高泛化能力的20条技巧和诀窍](https://blog.csdn.net/starzhou/article/details/52754436)
 - [[精进魔法] Regularization：减少Overfitting ，提高模型泛化能力](https://ithelp.ithome.com.tw/articles/10203371)
-## NLP
+## 学习资料
+- [BAT机器学习面试1000题系列](https://blog.csdn.net/v_JULY_v/column/info/17609)
