@@ -14,7 +14,7 @@
 - [XGBoost、LightGBM的详细对比介绍](https://www.cnblogs.com/infaraway/p/7890558.html)
 - [XGBoost, LightGBM性能大对比](https://zhuanlan.zhihu.com/p/24498293)
 - [xgboost中的数学原理](https://blog.csdn.net/a358463121/article/details/68617389)
-
+- [L1 VS L2 vs ElasticNet 正则化总结](https://www.cnblogs.com/fredkeke/p/9981388.html)
 
 ## 算法优化
 - [克服过拟合和提高泛化能力的20条技巧和诀窍](https://blog.csdn.net/starzhou/article/details/52754436)
