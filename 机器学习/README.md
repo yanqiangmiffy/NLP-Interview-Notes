@@ -1,5 +1,7 @@
 # 关于机器学习比较好的文章
 
+## 数学推导
+- [凸优化](https://blog.csdn.net/wangchy29/article/details/86499918)
 ## 机器学习
 - [Adaboost算法原理分析和实例+代码（简明易懂）](https://blog.csdn.net/guyuealian/article/details/70995333)
 - [Adaboost 算法的原理与推导](https://blog.csdn.net/v_JULY_v/article/details/40718799)
