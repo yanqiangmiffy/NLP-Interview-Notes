@@ -87,6 +87,7 @@ def heapSort(nums):
     :param nums:
     :return:
     """
+
     # 调整堆
     def adjustHeap(nums, i, size):
         # 非叶子结点的左右两个孩子
@@ -104,11 +105,13 @@ def heapSort(nums):
             # 第 2 个参数传入 largest 的索引是交换前大数字对应的索引
             # 交换后该索引对应的是小数字，应该把该小数字向下调整
             adjustHeap(nums, largest, size)
+
     # 建立堆
     def builtHeap(nums, size):
-        for i in range(len(nums)//2)[::-1]: # 从倒数第一个非叶子结点开始建立大根堆
-            adjustHeap(nums, i, size) # 对所有非叶子结点进行堆的调整
+        for i in range(len(nums) // 2)[::-1]:  # 从倒数第一个非叶子结点开始建立大根堆
+            adjustHeap(nums, i, size)  # 对所有非叶子结点进行堆的调整
         # print(nums)  # 第一次建立好的大根堆
+
     # 堆排序
     size = len(nums)
     builtHeap(nums, size)
@@ -119,4 +122,5 @@ def heapSort(nums):
         adjustHeap(nums, 0, i)
     return nums  # 由于每次大的都会放到后面，因此最后的 nums 是从小到大排列
 
-print("堆排序：",heapSort(nums))
+
+print("堆排序：", heapSort(nums))
