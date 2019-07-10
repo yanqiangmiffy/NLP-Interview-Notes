@@ -169,6 +169,28 @@ print(findMinFac(cnts,A,B))
 5. 动态规划：给定一个词典dictionary，实现分词：
     > 词语长度最大;最少分词次数
 
+## 神州泰岳
+- 连续子数组乘积最大
+- 连续子数组求和最大
+- 连续最长的无重复子串
+- Dropout
+- Attention，Self Attention
+- seq2seq如何解决不等长问题
+    >通过一些标志填充
+- 未登录如何解决：增量学习，word2vec重新训练
+- FastText的sub-word
+- CNN
+- RNN,LSTM的结构
+
+## 猿辅导
+- 简历项目
+- 算法题
+    > https://leetcode.com/problems/add-two-numbers/
+
+## 阿里巴巴-本地生活
+- Doc2Vec与word2vec的区别
+- 如何使用别人的pretrained embedding进行fine-tuning
+
 ## 其他公司面试
 1. 堆排序和快速排序
 2. 贝叶斯原理和推理过程
