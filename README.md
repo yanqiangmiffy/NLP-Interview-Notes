@@ -190,6 +190,12 @@ print(findMinFac(cnts,A,B))
 ## 阿里巴巴-本地生活
 - Doc2Vec与word2vec的区别
 - 如何使用别人的pretrained embedding进行fine-tuning
+- word2vec的原理 ，如何解决一词多义
+- lstm，bilstm,cnn的比较
+## 第四范式
+- 逻辑回归的手推公式
+- 分词实现
+- 最长公共前缀
 
 ## 其他公司面试
 1. 堆排序和快速排序
