@@ -1,4 +1,15 @@
 # https://blog.csdn.net/Bone_ACE/article/details/46718683
+"""
+
+前序遍历：根结点 ---> 左子树 ---> 右子树
+
+中序遍历：左子树---> 根结点 ---> 右子树
+
+后序遍历：左子树 ---> 右子树 ---> 根结点
+
+层次遍历：只需按层次遍历即可
+
+"""
 class TreeNode(object):
     def __init__(self,value):
         self.value=value
