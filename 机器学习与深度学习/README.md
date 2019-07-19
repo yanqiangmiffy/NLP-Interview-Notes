@@ -23,6 +23,10 @@
 - [理解 LSTM 网络](https://www.jianshu.com/p/9dc9f41f0b29)
 - [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
 
+## 自然语言处理
+
+
+
 ## 算法优化
 - [克服过拟合和提高泛化能力的20条技巧和诀窍](https://blog.csdn.net/starzhou/article/details/52754436)
 - [[精进魔法] Regularization：减少Overfitting ，提高模型泛化能力](https://ithelp.ithome.com.tw/articles/10203371)
