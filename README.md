@@ -233,6 +233,8 @@ print(findMinFac(cnts,A,B))
 - 聊待遇：很诱惑
 - 算法题1：斐波那契数列
 - 算法题2：铁路区间空余车票求解
+https://exservice.12306.cn/prepub/oj/status?myself=0&page=1
+
 
 ## 腾讯-CSIG算法实习生
 - 算法题：六选四+C++手写
@@ -252,6 +254,96 @@ print(findMinFac(cnts,A,B))
 
 二面，问的导师那边的项目，比如ner，cnn文本分类，crf，em算法，维特比算法，bilstm，二面问的比较细，主要考察你是不是对网络结构理解，cnn一维二维的区别，问了两道算法题，第一道相邻单词，第二道最长数字字串
 
+## 拼多多在线笔试
+```python
+# 1
+# import sys
+# if __name__ == '__main__':
+#
+#     # a = [1, 3, 7, 4, 10]
+#     # b = [2, 1, 5, 8, 9]
+#     line = sys.stdin.readline().strip()
+#     # 把每一行的数字分隔后转化成int列表
+#     a = list(map(int, line.split()))
+#
+#     line = sys.stdin.readline().strip()
+#     # 把每一行的数字分隔后转化成int列表
+#     b = list(map(int, line.split()))
+#
+#     def find_b(s, e):
+#         b.sort(reverse=True)
+#         for num in b:
+#             if num < e and num > s:
+#                 return num
+#
+#     flag=False
+#     for i in range(1, len(a)):
+#         if a[i] < a[i - 1]:
+#             if find_b(a[i-1],a[i+1]):
+#                 a[i]=find_b(a[i-1],a[i+1])
+#                 flag=True
+#                 break
+#     if flag:
+#         print(" ".join([str(num) for num in a ]))
+#     else:
+#         print("NO")
+
+# 2
+# import sys
+# if __name__ == '__main__':
+#
+#     line=sys.stdin.readline().strip()
+#     # CAT TIGER RPC
+#     flag=True
+#     new_line=line.replace(' ','')
+#     if len(new_line)==len(set(new_line)):
+#         flag=False
+#     else:
+#         words=line.split()
+#         if not set.intersection(set(words[0]),set(words[-1])):
+#             flag = False
+#         else:
+#             for i in range(1,len(words)):
+#                 if not set.intersection(set(words[i]),set(words[i-1])):
+#                     flag = False
+#                     break
+#     if flag:
+#         print("true")
+#     else:
+#         print("false")
+
+
+# 4
+
+import sys
+if __name__ == '__main__':
+
+    line=sys.stdin.readline().strip()
+    N=int(line)
+
+    line = sys.stdin.readline().strip()
+    Li= list(map(int, line.split()))
+
+    line = sys.stdin.readline().strip()
+    Wi= list(map(int, line.split()))
+
+    lw=dict(zip(Wi,Li))
+    Li.sort(reverse=True)
+    Wi.sort(key=lambda x:lw[x],reverse=True)
+    height=1
+    for i,wi in enumerate(Wi):
+        print(i)
+        cur_sum=0
+        cur_height = 0
+        for j in Wi[i+1:]:
+            if cur_sum<=sum(7*[Wi[i]]):
+                cur_sum+=Wi[j]
+                cur_height+=1
+        height=max(cur_height,height)
+    print(height)
+
+
+```
 ## 映客直播[他人]
 - XGB是如何并行的。如何快速分裂的。
 - adma的设计思想是什么。
