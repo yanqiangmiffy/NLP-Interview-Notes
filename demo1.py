@@ -96,29 +96,53 @@
 # 4
 
 import sys
+
 if __name__ == '__main__':
 
-    line=sys.stdin.readline().strip()
-    N=int(line)
+    line = sys.stdin.readline().strip()
+    N = int(line)
 
     line = sys.stdin.readline().strip()
-    Li= list(map(int, line.split()))
+    Li = list(map(int, line.split()))
 
     line = sys.stdin.readline().strip()
-    Wi= list(map(int, line.split()))
+    Wi = list(map(int, line.split()))
 
-    lw=dict(zip(Wi,Li))
+    lw = dict(zip(Wi, Li))
     Li.sort(reverse=True)
-    Wi.sort(key=lambda x:lw[x],reverse=True)
-    height=1
-    for i,wi in enumerate(Wi):
+    Wi.sort(key=lambda x: lw[x], reverse=True)
+    height = 1
+    for i, wi in enumerate(Wi):
         print(i)
-        cur_sum=0
+        cur_sum = 0
         cur_height = 0
-        for j in Wi[i+1:]:
-            if cur_sum<=sum(7*[Wi[i]]):
-                cur_sum+=Wi[j]
-                cur_height+=1
-        height=max(cur_height,height)
+        for j in Wi[i + 1:]:
+            if cur_sum <= sum(7 * [Wi[i]]):
+                cur_sum += Wi[j]
+                cur_height += 1
+        height = max(cur_height, height)
     print(height)
 
+from simhash import Simhash
+from nltk import ngrams
+
+
+def extract_hash_feature(df):
+    def get_ngrams(sequence, n=2):
+        return ['_'.join(ngram) for ngram in ngrams(sequence, n)]
+
+    def calculate_simhash_dist(sequence1, sequence2):
+        return Simhash(sequence1).distance(Simhash(sequence2))
+
+    def calculate_all_simhash(row):
+        query, title = row['query'].split(), row['title'].split()
+        simhash_w1gram_dist = calculate_simhash_dist(query, title)
+        simhash_w2gram_dist = calculate_simhash_dist(get_ngrams(query, 2), get_ngrams(title, 2))
+        simhash_w3gram_dist = calculate_simhash_dist(get_ngrams(query, 3), get_ngrams(title, 3))
+        return '{}:{}:{}'.format(simhash_w1gram_dist, simhash_w2gram_dist, simhash_w3gram_dist)
+
+    df['sim_hash'] = df.apply(calculate_all_simhash, axis=1, raw=True)
+    df['simhash_w1gram_dist'] = df['sim_hash'].apply(lambda x: float(x.split(':')[0]))
+    df['simhash_w2gram_dist'] = df['sim_hash'].apply(lambda x: float(x.split(':')[1]))
+    df['simhash_w3gram_dist'] = df['sim_hash'].apply(lambda x: float(x.split(':')[2]))
+    del df['sim_hash']
