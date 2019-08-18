@@ -7,12 +7,12 @@
 @time: 2019-07-24 13:05
 @description:
 """
+import sys
 
 
 def reverseWords(s):
     new_string = ""
     j = len(s)
-    print(j)
     # iterate the str in a reversed order
     for i in range(len(s) - 1, -1, -1):
         # trim the trailing space
@@ -23,12 +23,12 @@ def reverseWords(s):
             if len(new_string) != 0:
                 new_string += " "
             new_string += s[i:j]
-        print(i,s[i],new_string)
     return new_string
 
 
-reverseWords("the sky is blue")
-
-s="the sky is blue"
-for i in range(len(s)-1,-1,-1):
-    print(i,s[i])
+line = sys.stdin.readline().strip()
+s = reverseWords(line)
+print(s)
+# s = "the sky is blue"
+# for i in range(len(s) - 1, -1, -1):
+#     print(i, s[i])
