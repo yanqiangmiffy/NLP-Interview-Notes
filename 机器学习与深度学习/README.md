@@ -20,6 +20,7 @@
 - [逻辑回归（Logistic Regression）](https://zhuanlan.zhihu.com/p/28408516)
 - [XGBoost 与 GBDT 的区别](https://blog.csdn.net/jackmcgradylee/article/details/77778001)
 - [线性回归 梯度求解](https://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html#comparison-to-linear-regression)
+- [HMM 隐马尔科夫状态序列](https://www.zhihu.com/question/20962240)
 ## 深度学习
 - [理解 LSTM 网络](https://www.jianshu.com/p/9dc9f41f0b29)
 - [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
